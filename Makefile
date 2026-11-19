@@ -1,18 +1,18 @@
 # Makefile
 
-NAME = projet-2
+NAME = Morpion
 
 SRCS = main.c \
-tic-tac-toe.c \
+	tic-tac-toe.c	
 
-
+CFLAGS = -Wall -Wextra -O2 -Wno-unused-result
 
 all: $(NAME)
 
 $(NAME): $(SRCS)
-	gcc $(SRCS) -o $(NAME)
+	gcc $(CFLAGS) $(SRCS) -o $(NAME)
 
 fclean:
 	rm -f $(NAME)
 
-re: fclean all  
+re: fclean all
